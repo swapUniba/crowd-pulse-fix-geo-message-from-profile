@@ -15,9 +15,13 @@ repositories {
     }
 }
 
+configurations.all {
+    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+}
+
 dependencies {
-    compile 'com.github.swapUniba:crowd-pulse-data-java:0.0.1'
-    compile 'com.github.swapUniba:crowd-pulse-fix-geo-message:0.0.1'
+    compile 'com.github.swapUniba:crowd-pulse-data-java:master-SNAPSHOT'
+    compile 'com.github.swapUniba:crowd-pulse-fix-geo-message:master-SNAPSHOT'
     compile group: 'com.beust', name: 'jcommander', version: '1.47'
     compile group: 'io.reactivex', name: 'rxjava', version: '1.0.9'
 }
